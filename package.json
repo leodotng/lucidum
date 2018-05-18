@@ -1,0 +1,29 @@
+{
+  "name": "lucidum",
+  "version": "1.0.0",
+  "description": "Simple front-end framework",
+  "main": "dist/lucidum.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrchriswindsor/lucidum.git"
+  },
+  "keywords": [],
+  "author": "mrchriswindsor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrchriswindsor/lucidum/issues"
+  },
+  "homepage": "https://github.com/mrchriswindsor/lucidum#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify-es": "^1.0.1"
+  }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Conditional Example</title>
+</head>
+
+<body>
+  <div id="app">
+    <p showif="name === 'chris'">Your name is chris</p>
+    <p showelse>Your name is not chris</p>
+    <input type="text" bindval="name">
+  </div>
+  <script src="lucidum.min.js"></script>
+  <script>
+    new Lucidum({
+      data: {
+        name: "chris"
+      }
+    })
+  </script>
+</body>
+
+</html>

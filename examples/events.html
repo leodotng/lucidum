@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Events Examples</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>Counter: {{counter}}</p>
+    <button @click="counter++">Increase Counter</button>
+    <button @click="doubleCounter()">Double Counter</button>
+    <hr>
+    <p>check console for this one</p>
+    <input type="text" @input="console.log('input changed')">
+  </div>
+  <script src="lucidum.min.js"></script>
+  <script>
+    new Lucidum({
+      data: {
+        counter: 0
+      },
+      methods: {
+        doubleCounter() {
+          this.counter = this.counter * 2;
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

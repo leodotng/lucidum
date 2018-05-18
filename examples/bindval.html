@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bindval Examples</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>Name: {{name}}</p>
+    <select bindval="name">
+      <option value="chris">chris</option>
+      <option value="seth">seth</option>
+      <option value="dylan">dylan</option>
+    </select>
+    <hr>
+    <p>Age: {{age}}</p>
+    <input type="number" bindval="age">
+    <hr>
+    <p>Favorite color: {{favColor}}</p>
+    <input type="text" bindval="favColor">
+  </div>
+  <script src="lucidum.min.js"></script>
+  <script>
+    new Lucidum({
+      data: {
+        name: "chris",
+        age: 16,
+        favColor: "red"
+      }
+    })
+  </script>
+</body>
+
+</html>

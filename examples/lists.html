@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>List Examples</title>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li loopfor="(index, food) in foodList">{{index}}: {{food}}
+        <button @click="foodList.splice({{index}} - 1, 1)">X</button>
+      </li>
+    </ul>
+    <input bindval="newFoodItem" type="text" placeholder="add food to list">
+    <button @click="foodList.push(newFoodItem)">add to list</button>
+    <hr>
+    <ul>
+      <li loopfor="(index, usr) in users">{{index}}: {{usr.name}}, {{usr.age}}</li>
+    </ul>
+    <hr>
+    <ul>
+      <li loopfor="(index, todo) in todos">
+        <del showif="todos[{{index}} - 1].completed === true">
+          {{todo.title}}
+        </del>
+        <span showelse>
+          {{todo.title}}
+        </span>
+  </div>
+  </ul>
+  </div>
+  <script src="lucidum.min.js"></script>
+  <script>
+    new Lucidum({
+      data: {
+        foodList: ["Apple", "Bread", "Cookie"],
+        newFoodItem: "Grapes",
+        users: [{
+          name: "Seth",
+          age: 16
+        }, {
+          name: "Dylan",
+          age: 16
+        }],
+        todos: [{
+          title: "wash car",
+          completed: true
+        }, {
+          title: "cut grass",
+          completed: false
+        }]
+      }
+    })
+  </script>
+</body>
+
+</html>
