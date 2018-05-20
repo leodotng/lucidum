@@ -1,6 +1,10 @@
 # Lucidum
 
-## Example instance
+## Examples can be found in '*examples*' folder
+
+---
+
+## Basic instance
 
 ```javascript
 let vm = new Lucidum({
@@ -75,7 +79,9 @@ let vm = new Lucidum({
 
 ```html
 <ul>
-  <li loopfor="(index, food) in foodList"></li>
+  <li loopfor="(index, food) in foodList">
+    {{index}}: {{food}}
+  </li>
 </ul>
 ```
 
