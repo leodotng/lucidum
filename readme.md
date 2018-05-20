@@ -2,8 +2,6 @@
 
 ## Examples can be found in '*examples*' folder
 
----
-
 ## Basic instance
 
 ```javascript
